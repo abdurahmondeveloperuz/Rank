@@ -1,0 +1,76 @@
+@media (max-width: 1024px) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .container {
+        max-width: 90rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    .stats-summary {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .top-three {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .student-card {
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+
+    .place-1 {
+        transform: none;
+        order: -1;
+    }
+
+    .student-row {
+        grid-template-columns: auto 3rem 1fr auto;
+        gap: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: var(--spacing-sm);
+    }
+
+    h1 {
+        font-size: 3.2rem;
+    }
+
+    .leaderboard {
+        padding: var(--spacing-md);
+    }
+
+    .student-card {
+        padding: var(--spacing-md);
+    }
+
+    .student-img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .student-row {
+        padding: var(--spacing-sm);
+    }
+
+    .student-img-small {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .progress-bar {
+        height: 0.6rem;
+    }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Rankings 2024</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header animate-slide-in">
+            <h1>Student Rankings</h1>
+            <p class="subtitle">Class of 2024</p>
+        </header>
+        
+        <div class="leaderboard">
+            <div class="stats-summary">
+                <div class="stat-item animate-slide-in" style="animation-delay: 0.1s">
+                    <span class="stat-value animate-pulse">98</span>
+                    <span class="stat-label">Highest Score</span>
+                </div>
+                <div class="stat-item animate-slide-in" style="animation-delay: 0.2s">
+                    <span class="stat-value animate-pulse">89.6</span>
+                    <span class="stat-label">Class Average</span>
+                </div>
+                <div class="stat-item animate-slide-in" style="animation-delay: 0.3s">
+                    <span class="stat-value animate-pulse">156</span>
+                    <span class="stat-label">Total Students</span>
+                </div>
+            </div>
+
+            <div class="top-three">
+                <div class="student-card place-2 animate-slide-in" data-place="2nd" style="animation-delay: 0.4s">
+                    <div class="medal silver">
+                        <svg viewBox="0 0 24 24" class="medal-icon">
+                            <path d="M12 15.4L8.24 17.67L9.24 13.39L5.92 10.51L10.3 10.13L12 6.1L13.71 10.14L18.09 10.52L14.77 13.4L15.77 17.68L12 15.4Z"/>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <img src="https://i.pravatar.cc/150?img=32" alt="Emma Thompson" class="student-img">
+                        <h3>Emma Thompson</h3>
+                        <div class="score-badge animate-shine">95 points</div>
+                        <div class="stats">
+                            <div class="stat">
+                                <span>Rank</span>
+                                <strong>2nd</strong>
+                            </div>
+                            <div class="stat">
+                                <span>Progress</span>
+                                <strong>95%</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="student-card place-1 animate-slide-in" data-place="1st" style="animation-delay: 0.5s">
+                    <div class="medal gold">
+                        <svg viewBox="0 0 24 24" class="medal-icon">
+                            <path d="M12 15.4L8.24 17.67L9.24 13.39L5.92 10.51L10.3 10.13L12 6.1L13.71 10.14L18.09 10.52L14.77 13.4L15.77 17.68L12 15.4Z"/>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <img src="https://i.pravatar.cc/150?img=33" alt="John Smith" class="student-img">
+                        <h3>John Smith</h3>
+                        <div class="score-badge animate-shine">98 points</div>
+                        <div class="stats">
+                            <div class="stat">
+                                <span>Rank</span>
+                                <strong>1st</strong>
+                            </div>
+                            <div class="stat">
+                                <span>Progress</span>
+                                <strong>98%</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="student-card place-3 animate-slide-in" data-place="3rd" style="animation-delay: 0.6s">
+                    <div class="medal bronze">
+                        <svg viewBox="0 0 24 24" class="medal-icon">
+                            <path d="M12 15.4L8.24 17.67L9.24 13.39L5.92 10.51L10.3 10.13L12 6.1L13.71 10.14L18.09 10.52L14.77 13.4L15.77 17.68L12 15.4Z"/>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <img src="https://i.pravatar.cc/150?img=31" alt="Michael Johnson" class="student-img">
+                        <h3>Michael Johnson</h3>
+                        <div class="score-badge animate-shine">92 points</div>
+                        <div class="stats">
+                            <div class="stat">
+                                <span>Rank</span>
+                                <strong>3rd</strong>
+                            </div>
+                            <div class="stat">
+                                <span>Progress</span>
+                                <strong>92%</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="other-rankings">
+                <h2>Other Top Performers</h2>
+                <div class="student-row" style="animation-delay: 0.7s">
+                    <span class="rank">4</span>
+                    <img src="https://i.pravatar.cc/150?img=34" alt="Sarah Wilson" class="student-img-small">
+                    <div class="student-info">
+                        <span class="name">Sarah Wilson</span>
+                        <span class="progress-bar">
+                            <span class="progress" style="width: 90%"></span>
+                        </span>
+                    </div>
+                    <span class="score">90</span>
+                </div>
+
+                <div class="student-row" style="animation-delay: 0.8s">
+                    <span class="rank">5</span>
+                    <img src="https://i.pravatar.cc/150?img=35" alt="David Brown" class="student-img-small">
+                    <div class="student-info">
+                        <span class="name">David Brown</span>
+                        <span class="progress-bar">
+                            <span class="progress" style="width: 88%"></span>
+                        </span>
+                    </div>
+                    <span class="score">88</span>
+                </div>
+
+                <div class="student-row" style="animation-delay: 0.9s">
+                    <span class="rank">6</span>
+                    <img src="https://i.pravatar.cc/150?img=36" alt="Lisa Anderson" class="student-img-small">
+                    <div class="student-info">
+                        <span class="name">Lisa Anderson</span>
+                        <span class="progress-bar">
+                            <span class="progress" style="width: 85%"></span>
+                        </span>
+                    </div>
+                    <span class="score">85</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

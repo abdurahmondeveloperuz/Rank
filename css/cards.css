@@ -1,0 +1,293 @@
+.top-three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+    position: relative;
+}
+
+.student-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    text-align: center;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(226, 232, 240, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.student-card::before {
+    content: attr(data-place);
+    position: absolute;
+    top: 0;
+    right: var(--spacing-md);
+    background: var(--gradient-primary);
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    font-size: 1.2rem;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.student-card:hover::before {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.student-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-primary-light);
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.student-img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--spacing-md);
+    border: 4px solid var(--color-surface);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    filter: grayscale(20%);
+    object-fit: cover;
+}
+
+.student-card:hover .student-img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+    border-color: var(--color-primary-light);
+}
+
+.student-card h3 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+.student-card:hover h3 {
+    color: var(--color-primary);
+}
+
+.score-badge {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: var(--radius-full);
+    font-weight: 500;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.score-badge::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.student-card:hover .score-badge::after {
+    left: 100%;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-sm);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(226, 232, 240, 0.6);
+    transition: all 0.3s ease;
+}
+
+.student-card:hover .stats {
+    border-color: var(--color-primary-light);
+}
+
+.stat {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.student-card:hover .stat {
+    transform: scale(1.05);
+}
+
+.stat span {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+}
+
+.stat strong {
+    font-size: 1.6rem;
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+.student-card:hover .stat strong {
+    color: var(--color-primary);
+}
+
+.medal {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.student-card:hover .medal {
+    transform: translateX(-50%) scale(1.2);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.medal-icon {
+    width: 2rem;
+    height: 2rem;
+    fill: white;
+}
+
+.gold {
+    background: var(--gradient-gold);
+}
+
+.silver {
+    background: var(--gradient-silver);
+}
+
+.bronze {
+    background: var(--gradient-bronze);
+}
+
+.place-1 {
+    transform: scale(1.05);
+    animation: float 6s ease-in-out infinite;
+}
+
+.student-row {
+    display: grid;
+    grid-template-columns: auto 4rem 1fr auto;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 0.6s ease-out forwards;
+}
+
+.student-row:hover {
+    background: var(--color-surface);
+    transform: translateX(5px) scale(1.01);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.student-row .rank {
+    font-weight: 600;
+    color: var(--color-primary);
+    width: 2.4rem;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-surface);
+    border-radius: var(--radius-full);
+    transition: all 0.3s ease;
+}
+
+.student-row:hover .rank {
+    background: var(--color-primary);
+    color: white;
+    transform: scale(1.1);
+}
+
+.student-img-small {
+    width: 4rem;
+    height: 4rem;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+    transition: all 0.3s ease;
+    filter: grayscale(20%);
+}
+
+.student-row:hover .student-img-small {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.student-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.student-info .name {
+    font-weight: 500;
+    margin-bottom: var(--spacing-xs);
+    transition: color 0.3s ease;
+}
+
+.student-row:hover .name {
+    color: var(--color-primary);
+}
+
+.student-row .score {
+    font-weight: 600;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.student-row:hover .score {
+    transform: scale(1.1);
+}
+
+.progress-bar {
+    background: rgba(226, 232, 240, 0.6);
+    border-radius: var(--radius-full);
+    height: 0.8rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-full);
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shine 2s linear infinite;
+}
